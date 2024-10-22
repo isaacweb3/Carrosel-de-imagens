@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: #2e2e2e; */
+    background-image: url(https://cdn.pixabay.com/photo/2017/02/07/09/02/wood-2045380_1280.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4em;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0px 0px 5px white;
+}
+
+.container {
+    width: 800px;
+    height: 460px;
+    overflow: hidden;
+    /*Conteúdo que ultrapassa as Divs no caso estourando, o hidden esconde*/
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    /*Top e Left só funcionam com Positiion Absolute*/
+    transform: translate(-50%, -50%);
+    /*Desloca o container para o centro*/
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #ff9500;
+}
+
+.imagem img {
+    height: 100%;
+    width: 100%;
+}
+
+.bar {
+    background-color: #0da319;
+    width: 40px;
+    height: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 20px;
+
+}
+
+.bar:hover {
+    transition-delay: 05ms;
+    height: 20px;
+    width: 60px;
+    background-color: #15ff00;
+    transform: rotate(360deg);
+    border: #ffffff solid 4px;
+    box-shadow: 0px 0px 20px #cccccc;
+    filter: grayscale(50%);
+    /* filter: saturate(100%); */
+    filter: brightness(120%);
+}
+
+.navegacao {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+
+
+
+#imagem2:checked~.navegacao {
+    background-color: rgb(0, 255, 255);
+}
+
+/* ~ =  Vai dizer que os elementos são irmãos do mesmo nível */
+
+input {
+    display: none;
+}
+
+.imagens {
+    display: flex;
+    height: 100%;
+    width: 800%;
+}
+
+.imagem {
+    width: 12.5%;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#imagem1:checked~.img1 {
+    margin-left: 0;
+}
+
+#imagem2:checked~.img1 {
+    margin-left: -12.5%;
+}
+
+#imagem3:checked~.img1 {
+    margin-left: -25%;
+}
+
+#imagem4:checked~.img1 {
+    margin-left: -37.5%;
+}
+
+#imagem5:checked~.img1 {
+    margin-left: -50%;
+}
+
+#imagem6:checked~.img1 {
+    margin-left: -62.5%;
+}
+
+#imagem7:checked~.img1 {
+    margin-left: -75%;
+}
+
+#imagem8:checked~.img1 {
+    margin-left: -87.5%;
+}
+
+footer {
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 608px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: rgb(127, 49, 5);
+    
+}
